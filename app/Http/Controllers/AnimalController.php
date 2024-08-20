@@ -11,4 +11,14 @@ class AnimalController extends Controller
     {
         echo "Walking";
     }
+
+
+    public function getwalk()
+    {
+        echo "get request walk method";
+    }
+    public function postwalk()
+    {
+        echo "post request walk method";
+    }
 }

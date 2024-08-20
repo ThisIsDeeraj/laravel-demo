@@ -112,11 +112,31 @@ class HomeController extends Controller
         dump($studentCollection->isNotEmpty());
         // array 
         dump($students[1]['name']);
-      
     }
 
 
-    public function landingPage() {
+    public function landingPage()
+    {
         return view("sub-folder.home-with-style");
+    }
+
+    public function restApiPage()
+    {
+        return view('rest-demo');
+    }
+    public function restApiGetData($id,Request $request)
+    {
+        // dd($id);
+        $data = $request->email;
+        dd($data);
+        // return view('rest-demo');
+    }
+    public function restApiPostData(Request $request)
+    {
+        // payload 
+        $data = $request->all();
+        $email = $request->email;
+        dd($data);
+        // return view('rest-demo');
     }
 }

@@ -24,7 +24,7 @@
         <h3> {{ $animal->age }}</h3>
     @endforeach
 
-
+<a href="{{ route('user-register') }}">Register Now</a>
 </body>
 
 </html>
